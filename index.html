@@ -3,52 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abdul Fareed - Resume</title>
-  <link rel="stylesheet" href="sty.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <title>Abdul Fareed | Resume</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts for elegance -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <aside class="sidebar">
     <div class="user">
-      <img src="photo.jpg" alt="Abdul Fareed photo">
-      <h1 class="nm">Abdul Fareed</h1>
-      <span class="jb">Student</span>
+      <img src="photo.jpg" alt="Profile Photo">
+      <h1>Abdul Fareed</h1>
+      <p class="title">Student</p>
     </div>
-    <nav class="nv">
+    <nav>
       <ul>
-        <li><a href="#Details">Details</a></li>
-        <li><a href="#Education">Education</a></li>
-        <li><a href="#TechnicalSkills">Technical Skills</a></li>
-        <li><a href="#Project">Project</a></li>
+        <li><a href="#details">Details</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Technical Skills</a></li>
+        <li><a href="#project">Project</a></li>
       </ul>
     </nav>
-  </header>
+  </aside>
   <main>
-    <section class="card Details" id="Details">
-      <h2 class="heading"><span>Details about me</span></h2>
-      <div class="Row">
-        <div class="det">
-          <p><strong>Name:</strong> Abdul Fareed</p>
-          <p><strong>Age:</strong> 23</p>
-          <p><strong>Gender:</strong> Male</p>
-          <p><strong>Email:</strong> fareed8095371@gmail.com</p>
-          <p><strong>Phone:</strong> 8095143609</p>
-        </div>
-      </div>
+    <section id="details" class="card animate">
+      <h2>Details About Me</h2>
+      <ul class="details-list">
+        <li><strong>Name:</strong> Abdul Fareed</li>
+        <li><strong>Age:</strong> 23</li>
+        <li><strong>Gender:</strong> Male</li>
+        <li><strong>Email:</strong> <a href="mailto:fareed8095371@gmail.com">fareed8095371@gmail.com</a></li>
+        <li><strong>Phone:</strong> <a href="tel:8095143609">8095143609</a></li>
+      </ul>
     </section>
-    <section class="card Education" id="Education">
-      <h2 class="heading"><span>Education</span></h2>
-      <div class="edu-wrap">
-        <table>
+    <section id="education" class="card animate">
+      <h2>Education</h2>
+      <table>
+        <thead>
           <tr>
             <th>Course</th>
             <th>Institute</th>
             <th>University</th>
             <th>Percentage</th>
           </tr>
+        </thead>
+        <tbody>
           <tr>
             <td>BE</td>
-            <td>HKE's SLN College</td>
+            <td>Hke's Sln College</td>
             <td>VTU</td>
             <td>56.45%</td>
           </tr>
@@ -64,35 +65,33 @@
             <td>KSEEB</td>
             <td>41.12%</td>
           </tr>
-        </table>
+        </tbody>
+      </table>
+    </section>
+    <section id="skills" class="card animate">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <span>Java</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Oracle</span>
+        <span>MySQL</span>
+        <span>Manual Testing</span>
+        <span>Automation Testing</span>
+        <span>Data Structures</span>
       </div>
     </section>
-    <section class="card TechnicalSkills" id="TechnicalSkills">
-      <h2 class="heading"><span>Technical Skills</span></h2>
-      <div class="skills">
-        <div class="skill"><span>Java</span><div class="bar"><div class="bar-fill" style="width:85%"></div></div></div>
-        <div class="skill"><span>HTML</span><div class="bar"><div class="bar-fill" style="width:90%"></div></div></div>
-        <div class="skill"><span>CSS</span><div class="bar"><div class="bar-fill" style="width:80%"></div></div></div>
-        <div class="skill"><span>JavaScript</span><div class="bar"><div class="bar-fill" style="width:60%"></div></div></div>
-        <div class="skill"><span>Oracle</span><div class="bar"><div class="bar-fill" style="width:75%"></div></div></div>
-        <div class="skill"><span>MySQL</span><div class="bar"><div class="bar-fill" style="width:75%"></div></div></div>
-        <div class="skill"><span>Manual Testing</span><div class="bar"><div class="bar-fill" style="width:70%"></div></div></div>
-        <div class="skill"><span>Automation Testing</span><div class="bar"><div class="bar-fill" style="width:55%"></div></div></div>
-        <div class="skill"><span>Data Structures</span><div class="bar"><div class="bar-fill" style="width:65%"></div></div></div>
-      </div>
+    <section id="project" class="card animate">
+      <h2>Project</h2>
+      <p><strong>Role:</strong> Team Member</p>
+      <p><strong>Title:</strong> Design of Foot Step Power Generation Using Piezoelectric Sensors</p>
+      <p><strong>Description:</strong> Developed a system to generate up to 12V output using piezoelectric sensors, enabling battery charging for portable devices. Compared efficiency based on applied pressure and ensured cost-effectiveness by sourcing affordable, accessible materials. The project avoided unnecessary complexities, focusing on practical implementation for real-world use.</p>
     </section>
-    <section class="card Project" id="Project">
-      <h2 class="heading"><span>Project</span></h2>
-      <div class="Row">
-        <div class="det">
-          <p><strong>Role:</strong> Team Member</p>
-          <p><strong>Title:</strong> Design of Foot Step Power Generation Using Piezoelectric Sensors</p>
-          <p><strong>Description:</strong>
-            Designed a system to generate 12V output to charge batteries via footstep pressure using piezoelectric sensors. The project demonstrates practical green energy for charging devices, comparing pressure effects on output, using accessible, affordable materials.
-          </p>
-        </div>
-      </div>
-    </section>
+    <footer>
+      <p>© 2025 Abdul Fareed. All rights reserved.</p>
+    </footer>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>
