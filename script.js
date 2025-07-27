@@ -1,21 +1,25 @@
-// script.js
-
-// Active navigation highlight on scroll
+// Highlight active section on scroll
 window.addEventListener('scroll', () => {
   const sections = document.querySelectorAll('main section');
-  const navLinks = document.querySelectorAll('.sidebar nav a');
-  let current = '';
-  sections.forEach(section => {
-    const secTop = section.offsetTop - 80;
-    const secHeight = section.clientHeight;
-    if (scrollY >= secTop && scrollY < secTop + secHeight) {
-      current = section.id;
+  const links    = document.querySelectorAll('.sidebar nav a');
+  let currentId = '';
+  sections.forEach(sec => {
+    const top    = sec.offsetTop - 80;
+    const bottom = top + sec.offsetHeight;
+    if (window.scrollY >= top && window.scrollY < bottom) {
+      currentId = sec.id;
     }
   });
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === '#' + current) {
-      link.classList.add('active');
-    }
+  links.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + currentId);
+  });
+});
+
+// Smooth scroll behavior
+document.querySelectorAll('.sidebar nav a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    window.scrollTo({ top: target.offsetTop - 50, behavior: 'smooth' });
   });
 });
